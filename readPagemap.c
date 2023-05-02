@@ -67,12 +67,8 @@ int main(int argc, char **argv) {
             // Move to the next page in the memory region
             offset += sizeof(uint64_t);
         }
-        
-        // Close the pagemap file
         close(pagemap_fd);
     }
-    
-    // Close the maps file
     fclose(maps_file);
     
     return 0;
